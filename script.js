@@ -1,68 +1,26 @@
-/* Estilos visuais gerais */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #f4f9f4;
-    color: #333;
+/**
+ * As informações exibidas abaixo são baseadas nas descrições técnicas das fontes.
+ */
+const informacoes = {
+    saf: "Os SAFs permitem colheitas sucessivas de produtos diferentes ao longo do tempo, reproduzindo a sucessão ecológica natural [14].",
+    abc: "O Plano ABC atingiu 113% da sua meta de mitigação de CO2, provando ser eficaz na transição para uma economia de baixo carbono [6, 15].",
+    mip: "O MIP pode reduzir custos com defensivos em até R$ 724,88 por hectare, mantendo a produtividade equivalente [16, 17].",
+    ap: "A Agricultura de Precisão reduz o desperdício de insumos e diminui a contaminação do solo e da água [18, 19]."
+};
+
+function mostrarDetalhe(chave) {
+    document.getElementById('texto-detalhe').innerText = informacoes[chave];
+    document.getElementById('detalhes').style.display = "block";
 }
 
-header {
-    background-color: #2e7d32; /* Verde sustentável */
-    color: white;
-    padding: 2rem;
-    text-align: center;
+function fecharModal() {
+    document.getElementById('detalhes').style.display = "none";
 }
 
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-left: 5px solid #2e7d32;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Modal simples */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    width: 70%;
-    border-radius: 10px;
-}
-
-.close {
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+// Fechar modal ao clicar fora dele
+window.onclick = function(event) {
+    let modal = document.getElementById('detalhes');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
