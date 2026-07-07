@@ -1,32 +1,88 @@
-<!-- No menu <nav> -->
-<nav>
-    <div class="container">
-        <a href="#tecnologias">Tecnologias Verdes</a>
-        <a href="#competitividade">Certificações & Mercado</a>
-        <a href="#referencias">Referências</a>
-    </div>
-</nav>
+}<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Sustentável - Brasil Potência Agroambiental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Brasil: Modelo Global de Agricultura Sustentável</h1>
+            <p>Conciliando a liderança em biodiversidade com o papel de 'celeiro do mundo'.</p>
+            <div class="stats-bar">
+                <div class="stat-item"><strong>66,3%</strong> do território preservado</div>
+                <div class="stat-item"><strong>113%</strong> da meta de mitigação de CO2</div>
+            </div>
+        </div>
+    </header>
 
-<!-- No <main>, antes do fechamento da tag -->
-<section id="referencias">
-    <h2>Referências Bibliográficas</h2>
-    <div class="lista-referencias">
-        <ul id="lista-ref">
-            <!-- As referências serão inseridas pelo JavaScript -->
-        </ul>
+    <nav id="navbar">
+        <div class="container">
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#economia">Mercado e Impacto</a>
+            <a href="#referencias">Referências Científicas</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Tecnologias de Baixo Carbono -->
+        <section id="tecnologias">
+            <h2 class="section-title">Tecnologias de Baixa Emissão</h2>
+            <p>O **Plano ABC** é o pilar da nossa economia de baixo carbono, superando metas de expansão em 154% [1, 2].</p>
+            <div class="grid">
+                <div class="card" onclick="abrirModal('abc')">
+                    <h3>Sistemas Integrados (ILPF)</h3>
+                    <p>Integra lavoura, pecuária e floresta, otimizando o uso da terra [3, 4].</p>
+                    <span class="btn">Saiba Mais</span>
+                </div>
+                <div class="card" onclick="abrirModal('ap')">
+                    <h3>Agricultura de Precisão</h3>
+                    <p>Uso de GPS e drones para aplicar insumos na medida exata [5, 6].</p>
+                    <span class="btn">Saiba Mais</span>
+                </div>
+                <div class="card" onclick="abrirModal('mip')">
+                    <h3>Manejo de Pragas (MIP)</h3>
+                    <p>Redução de até 68% nas pulverizações químicas [7, 8].</p>
+                    <span class="btn">Saiba Mais</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Mercado -->
+        <section id="economia" class="info-highlight">
+            <h2>Competitividade e Sustentabilidade</h2>
+            <div class="data-box">
+                <p><strong>Certificações:</strong> 83% das fazendas de soja certificadas do mundo estão no Brasil [9].</p>
+                <p><strong>Consumo:</strong> 66% dos consumidores globais pagariam mais por produtos éticos [9, 10].</p>
+                <p><strong>Agricultura Familiar:</strong> Seria a 8ª maior produtora de alimentos do mundo se fosse um país [11].</p>
+            </div>
+        </section>
+
+        <!-- Referências Dinâmicas -->
+        <section id="referencias">
+            <h2>Fontes e Bibliografia</h2>
+            <ul id="lista-referencias">
+                <!-- Preenchido via JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Modal para Detalhes -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
     </div>
-</section>
-2. CSS Adicional (style.css)
-Estilos para organizar a lista de fontes.
-#referencias { padding: 40px 0; border-top: 1px solid #ddd; margin-top: 40px; }
-.lista-referencias ul { list-style: none; padding: 0; }
-.lista-referencias li { 
-    background: #fff; 
-    margin-bottom: 10px; 
-    padding: 15px; 
-    border-radius: 5px; 
-    font-size: 0.9em; 
-    border-left: 4px solid var(--secondary);
-}
+
+    <footer>
+        <p>&copy; 2026 Projeto Agro Sustentável. Baseado em dados do IPEA, EMBRAPA, BPBES e SEBRAE.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
 
