@@ -1,86 +1,32 @@
+<!-- No menu <nav> -->
+<nav>
+    <div class="container">
+        <a href="#tecnologias">Tecnologias Verdes</a>
+        <a href="#competitividade">Certificações & Mercado</a>
+        <a href="#referencias">Referências</a>
+    </div>
+</nav>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Sustentável Brasil - Produtividade e Biodiversidade</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Brasil: Potência Agroambiental</h1>
-            <p>Líder em biodiversidade e celeiro do mundo, unindo tecnologia e conservação [4, 5].</p>
-        </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <a href="#tecnologias">Tecnologias Verdes</a>
-            <a href="#competitividade">Certificações & Mercado</a>
-            <a href="#legislacao">Código Florestal</a>
-        </div>
-    </nav>
-
-    <main class="container">
-        <!-- Seção de Tecnologias de Baixo Carbono -->
-        <section id="tecnologias">
-            <h2>Estratégias de Produção Sustentável</h2>
-            <p>O Brasil utiliza o **Plano ABC** para mitigar emissões de gases de efeito estufa através de tecnologias que poupam recursos naturais [2, 6].</p>
-            
-            <div class="grid">
-                <div class="card" onclick="exibirDados('abc')">
-                    <h3>Plano ABC</h3>
-                    <p>Focado em mitigar CO2 e recuperar pastagens degradadas [2].</p>
-                    <span class="btn">Ver Impacto</span>
-                </div>
-                <div class="card" onclick="exibirDados('ap')">
-                    <h3>Agro de Precisão</h3>
-                    <p>Uso de sensores e drones para otimizar fertilizantes e água [7, 8].</p>
-                    <span class="btn">Ver Eficiência</span>
-                </div>
-                <div class="card" onclick="exibirDados('mip')">
-                    <h3>Manejo de Pragas (MIP)</h3>
-                    <p>Redução de custos e uso inteligente de defensivos [9, 10].</p>
-                    <span class="btn">Ver Economia</span>
-                </div>
-                <div class="card" onclick="exibirDados('saf')">
-                    <h3>Sistemas Agroflorestais</h3>
-                    <p>Consórcio de culturas com espécies florestais para recuperar o solo [11, 12].</p>
-                    <span class="btn">Ver Benefícios</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Mercado e Certificações -->
-        <section id="competitividade">
-            <div class="banner">
-                <h2>Vantagem Competitiva Global</h2>
-                <p>As certificações ambientais (como ISO 14001) garantem acesso a mercados exigentes como a União Europeia [1, 13].</p>
-                <ul>
-                    <li><strong>Valor Agregado:</strong> 66% dos consumidores globais pagariam mais por produtos sustentáveis [14].</li>
-                    <li><strong>Brasil no Topo:</strong> 83% das fazendas de soja certificadas do mundo estão no Brasil [14].</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Modal de Dados Técnicos -->
-        <div id="modalDados" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fecharModal()">&times;</span>
-                <h2 id="modal-titulo"></h2>
-                <p id="modal-texto"></p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Sustentabilidade no Agro. Fontes: BPBES, IPEA, EMBRAPA e SEBRAE [2, 5, 8].</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<!-- No <main>, antes do fechamento da tag -->
+<section id="referencias">
+    <h2>Referências Bibliográficas</h2>
+    <div class="lista-referencias">
+        <ul id="lista-ref">
+            <!-- As referências serão inseridas pelo JavaScript -->
+        </ul>
+    </div>
+</section>
+2. CSS Adicional (style.css)
+Estilos para organizar a lista de fontes.
+#referencias { padding: 40px 0; border-top: 1px solid #ddd; margin-top: 40px; }
+.lista-referencias ul { list-style: none; padding: 0; }
+.lista-referencias li { 
+    background: #fff; 
+    margin-bottom: 10px; 
+    padding: 15px; 
+    border-radius: 5px; 
+    font-size: 0.9em; 
+    border-left: 4px solid var(--secondary);
+}
 
 
